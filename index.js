@@ -39,3 +39,11 @@ function generatePassword(){
     password01El.textContent = pass01;
     password02El.textContent = pass02;
 }
+
+password01El.addEventListener("click", async () => {
+    await navigator.clipboard.writeText(password01El.textContent);
+});
+
+password02El.addEventListener("click", async () => {
+    await navigator.clipboard.writeText(password02El.textContent);
+});
