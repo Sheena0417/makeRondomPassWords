@@ -4,34 +4,41 @@
     </head>
     <body>
         <div>
-            <h1>Generate a Random Password</h1>
-            <p>Never use an insecure password again</p>
+            <h1>Generate a <span class="titleColorCange">Random Password</span></h1>
+            <p class="subtitle">Never use an insecure password again</p>
         </div>
 
-        <div>
-            <p>Nomber</p>
-            <label class="switch">
-                <input type="checkbox" id="toggle">
-                <span class="slider"></span>
-                <span class="text">ON</span>
-            </label>
+        <div class="switchToggle">
+            <div class="nomberSwitch">
+                <p>Nomber</p>
+                <label class="switch">
+                    <input type="checkbox" id="toggle">
+                    <span class="slider"></span>
+                    <span class="text">ON</span>
+                </label>
+            </div>
+
+            <div class="simbolSwitch">
+                <p>Symbol</p>
+                <label class="switch">
+                    <input type="checkbox" id="toggle">
+                    <span class="slider"></span>
+                    <span class="text">ON</span>
+                </label>
+            </div>
         </div>
 
-        <div>
-            <p>simbol</p>
-            <label class="switch">
-                <input type="checkbox" id="toggle">
-                <span class="slider"></span>
-                <span class="text">ON</span>
-            </label>
+        <div class="numberOfCharacters">
+            <p>Number of characters</p>
+            <input id="number" type="number" value="0" />
         </div>
 
         <button>Generate Password</button>
 
         <hr>
 
-        <button></button>
-        <button></button>
+        <button id="password01"></button>
+        <button id="password02"></button>
 
         <script src="index.js"></script>
     </body>

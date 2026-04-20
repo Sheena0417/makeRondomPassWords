@@ -1,3 +1,114 @@
 body {
+    font-family: sans-serif;
+
+    color: white;
     margin: 0;
+    text-align: center;
+    background-color: #3852B4;
+}
+
+h1{
+    font-size: 30px;
+}
+
+.titleColorCange{
+    color: #F08D39;
+}
+
+.subtitle{
+    font-size: 12px;
+}
+
+p{
+    margin: 20px 10px;
+}
+
+.switchToggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nomberSwitch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.simbolSwitch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* 本体のcheckboxは見えなくする */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+/* 背景部分 */
+.slider {
+    position: absolute;
+    inset: 0;
+    background-color: #ccc;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* 白い丸 */
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    top: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+/* ONのとき背景色変更 */
+.switch input:checked + .slider {
+    background-color: #34c759;
+}
+
+/* ONのとき丸を右へ移動 */
+.switch input:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+#password01{
+    width: 150px;
+    height: 30px;
+    background-color: #5E7AC4;
+    border: none;
+    border-radius: 7px;
+}
+
+#password02{
+    width: 150px;
+    height: 30px;
+    background-color: #5E7AC4;
+    border: none;
+    border-radius: 7px;
+}
+
+.numberOfCharacters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
