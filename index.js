@@ -4,11 +4,13 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 const numberEl = document.getElementById("number-el");
 const password01El = document.getElementById("password01-el");
 const password02El = document.getElementById("password02-el");
+const toggleEl01 = document.getElementById("toggle-el_01");
+const toggleEl02 = document.getElementById("toggle-el_02");
 
 function generatePassword(){
 
-    function randomIndex(){
-        return Math.floor(Math.random() * characters.length);
+    function randomIndex(array){
+        return Math.floor(Math.random() * array.length);
     }
 
     let pass01 = "";
@@ -17,9 +19,21 @@ function generatePassword(){
 
     if (isNaN(num)) return;
 
+    let selectedCharacters;
+
+    if (toggleEl01.checked && toggleEl02.checked) {
+        selectedCharacters = characters;
+    } else if (toggleEl01.checked) {
+        selectedCharacters = characters.filter(char => /[a-zA-Z0-9]/.test(char));
+    } else if (toggleEl02.checked) {
+        selectedCharacters = characters.filter(char => /[^0-9]/.test(char));
+    } else {
+        selectedCharacters = characters.filter(char => /[a-zA-Z]/.test(char));
+    }
+
     for(let i = 0; i < num; i++){
-        pass01 += characters[randomIndex()];
-        pass02 += characters[randomIndex()];
+        pass01 += selectedCharacters[randomIndex(selectedCharacters)];
+        pass02 += selectedCharacters[randomIndex(selectedCharacters)];
     }
 
     password01El.textContent = pass01;
