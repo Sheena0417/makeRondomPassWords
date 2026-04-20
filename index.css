@@ -91,7 +91,8 @@ p{
     transform: translateX(26px);
 }
 
-#password01{
+#password01-el{
+    color: white;
     width: 150px;
     height: 30px;
     background-color: #5E7AC4;
@@ -99,10 +100,20 @@ p{
     border-radius: 7px;
 }
 
-#password02{
+#password02-el{
+    color: white;
     width: 150px;
     height: 30px;
     background-color: #5E7AC4;
+    border: none;
+    border-radius: 7px;
+}
+
+.generate-btn{
+    width: 320px;
+    height: 44px;
+    font-size: 24px;
+    font-weight: bold;
     border: none;
     border-radius: 7px;
 }
